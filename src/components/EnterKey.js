@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { setRepositoryDetails, setAPIKey, setError } from '../actions';
+import { setRepositoryDetailsAndRemoveError, setAPIKey, setError } from '../actions';
 import '../App.css';
 
 
@@ -15,7 +15,7 @@ function EnterKey() {
   const dispatch = useDispatch();
   let apiKey = useSelector(state => state.apiKey);
   const history = useHistory();
-  
+
   // to fetch repository details based on the submitted token
   async function getRepositoryDetails() {
        let repositoryArr = [];
@@ -35,7 +35,7 @@ function EnterKey() {
                   }
                    repositoryArr.push(obj);
                });
-               dispatch(setRepositoryDetails(repositoryArr, owner));
+               dispatch(setRepositoryDetailsAndRemoveError(repositoryArr, owner));
                history.push('/repositories'); // to redirect to priority interface after fetching repository details
                return repositoryArr;
            })

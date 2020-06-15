@@ -11,7 +11,7 @@ export function setAPIKey(data) {
     }
 }
 
-export  function setRepositoryDetails(dataArr, owner) {
+export  function setRepositoryDetailsAndRemoveError(dataArr, owner) {
     return {
         type: 'SET_REPOSITORY_DETAILS',
         data: {dataArr, owner}

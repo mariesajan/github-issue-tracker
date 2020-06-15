@@ -16,7 +16,8 @@ const allReducers = (state = initialState, action) => {
         case "SET_REPOSITORY_DETAILS": 
             return Object.assign({}, state, {
                 repositoryDetails: action.data.dataArr,
-                owner: action.data.owner
+                owner: action.data.owner,
+                isError: false
             });
         case "SET_ISSUES_ORDER":
             return Object.assign({}, state, {
