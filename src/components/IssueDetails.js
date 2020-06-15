@@ -47,7 +47,7 @@ function IssueDetails(props) {
                                     key={issue.url}
                                     >
                                     <StyledAvatarImage alt="Avatar" src={issue.user.avatar_url} />
-                                    <p>Title:<span>{issue.title}</span></p>
+                                    <p>{issue.title}</p>
                                     <StyledDateText>Created: <span>{createdDate}</span></StyledDateText>
                                     <StyledDateText>Last Updated: <span>{lastUpdated}</span></StyledDateText>
                                     

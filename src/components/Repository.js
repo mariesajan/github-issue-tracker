@@ -83,8 +83,7 @@ function Repository(props) {
             return;
         }
         let repositoryArr = [];
-         const issueUrl = `https://api.github.com/repos/${owner}/${repoName}/issues`;
-
+        const issueUrl = `https://api.github.com/repos/${owner}/${repoName}/issues`;
          await fetch(issueUrl)
             .then(data => {
                 return data.json()
