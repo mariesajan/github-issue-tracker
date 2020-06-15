@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App EnterKey Component matches the snapshot 1`] = `
+<div>
+  <h1
+    className="center"
+  >
+    Github Issue Tracker
+  </h1>
+  <div
+    className="center"
+  >
+    <label>
+      Enter the Key:
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+    
+  </div>
+</div>
+`;
